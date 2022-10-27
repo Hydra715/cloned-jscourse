@@ -85,15 +85,16 @@ export default class ColumnChart {
     this.subElements.body.innerHTML = this.getColumnBody(data);
   }
 
+  destroy() {
+    this.remove();
+    this.element = null;
+    this.subElements = {};
+  }
+  
   remove () {
     if (this.element) {
       this.element.remove();
     }
   }
 
-  destroy() {
-    this.remove();
-    this.element = null;
-    this.subElements = {};
-  }
 }
